@@ -6,6 +6,7 @@ import com.shaft.validation.Assertions;
 import objectModels.gui.HerokuFileUploadPage;
 import objectModels.gui.HerokuHomePage;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -41,8 +42,8 @@ public class HerokuTestRuns {
         driver.navigate().to("https://the-internet.herokuapp.com/");
     }
 
-    //@AfterMethod
-    //public void afterMethod() {
-    //driver.close();
-    //}
+    @AfterMethod
+    public void afterMethod() {
+    driver.close();
+    }
 }

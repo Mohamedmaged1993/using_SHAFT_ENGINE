@@ -19,10 +19,7 @@ import static org.testng.Assert.assertTrue;
     public void validateUserEmail() {
 	RestActions apiObject = new RestActions("https://cat-fact.herokuapp.com");
 	Response users = apiObject.performRequest(RequestType.GET, 200, "/facts/random");
-
-		//assertTrue(StringUtils.isNotEmpty(""));
-
-
+	
 		boolean text = RestActions.getResponseJSONValue(users, "text").isEmpty();
 	Assertions.assertTrue(text, AssertionType.NEGATIVE);
     }

@@ -6,11 +6,12 @@ import com.shaft.validation.Assertions;
 import objectModels.gui.GoogleHomePage;
 import objectModels.gui.GoogleSearchResultsPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class A_Search_FlatTest_NativeSeleniumWebDriver {
+public class GoogleTestRuns {
     private WebDriver driver;
     private GoogleHomePage googleHomePage;
     private GoogleSearchResultsPage googleSearchResultsPage;
@@ -35,8 +36,8 @@ private BaseClass baseClass;
 	driver.navigate().to("https://www.google.com/ncr");
     }
 
-    //@AfterMethod
-    //public void afterMethod() {
-	//driver.close();
-    //}
+    @AfterMethod
+    public void afterMethod() {
+	driver.close();
+    }
 }
