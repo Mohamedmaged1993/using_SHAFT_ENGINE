@@ -20,7 +20,3 @@ Test Automation Task Using Java programming Language , Maven , SHAFT-ENGINE
 #### *Technology Used* 
 
 Java, TestNG, Selenium,SHAFT-Engine , MavenFramework Used: Page Object Model
-
-#### *Features* 
-
-This project will help every one to build His/Her own framework with organized mindset , also different element locators challanges applied could help.
