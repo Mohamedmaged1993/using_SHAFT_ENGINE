@@ -13,13 +13,13 @@ import io.restassured.response.Response;
 
 import static org.testng.Assert.assertTrue;
 
-   public class UserData {
-
+   public class GetRandomCatFactsAPi {
+// create test method using restassured library to get random cat facts
     @Test
-    public void validateUserEmail() {
+    public void getRandomFacts() {
 	RestActions apiObject = new RestActions("https://cat-fact.herokuapp.com");
 	Response users = apiObject.performRequest(RequestType.GET, 200, "/facts/random");
-	
+
 		boolean text = RestActions.getResponseJSONValue(users, "text").isEmpty();
 	Assertions.assertTrue(text, AssertionType.NEGATIVE);
     }
